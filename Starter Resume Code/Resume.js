@@ -29,7 +29,7 @@ let captchaColorCode = getColorCode();
 colorDiv.style.backgroundColor = captchaColorCode;
 
 submitButton.addEventListener("click", function () {
-  if (userText.value === captchaColorCode) {
+  if (userText.value.toUpperCase() === captchaColorCode) {
     output.classList.add("correctCaptcha");
 
     output.innerHTML = "Correct!";
